@@ -8,7 +8,7 @@
 
 ##截图
 
-![123](http://7xragw.com1.z0.glb.clouddn.com/2016-02-27-13-08-35.png)
+![123](http://7xragw.com1.z0.glb.clouddn.com/2016-02-27-13-08-35.png-small)
 
 ##代码来源
 
