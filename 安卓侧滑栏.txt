@@ -1,0 +1,36 @@
+一般的侧滑的实现：
+  ViewGroup menu + Content
+  监听onTouchEvent时间
+  move: ViewGroup的leftMargin
+  up:根据菜单的宽度，决定将其隐藏或者显示；
+	1.Scroller
+	2.LeftMargin + Thread
+	
+新的思路：继承HorizontalScrollView
+自定义ViewGroup
+1. onMeasure
+决定内部View（子View）的宽和高，以及决定自己的宽和高
+
+2. onLayout
+决定子view的放置的位置
+
+3.onTouchEvent
+控制子View的移动效果,隐藏或展示menu
+
+自定义属性：
+允许用户设置菜单离屏幕右侧的边距
+1、书写xml文件 values/attr.xml
+2、在布局文件中进行使用没特别注意xmlns
+3、在构造方法中（3个参数的构造方法）中获得我们设置的值
+
+-----------------------------------------------------
+抽屉式侧滑
+区别：菜单仿佛在内容区域底下
+
+menuWidth
+100px  menuWidth-100
+200px  menuWidth-200
+
+属性动画:TrasltionX
+
+getScrollX : menuWidth~0
